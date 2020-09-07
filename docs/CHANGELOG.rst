@@ -2,6 +2,56 @@
 Changelog
 =========
 
+`4.2.0 <https://github.com/saltstack-formulas/template-formula/compare/v4.1.1...v4.2.0>`_ (2020-09-04)
+----------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen:** execute ``_madata`` state (\ `31e1096 <https://github.com/saltstack-formulas/template-formula/commit/31e1096adda4c23f77b797f35c465ba09043b3a6>`_\ )
+* **kitchen+travis:** fix ``centos6`` suite and rename to ``upstart`` (\ `97309c6 <https://github.com/saltstack-formulas/template-formula/commit/97309c6f4d6b18723ec5492564b1344155960ae0>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **map:** generate a YAML file to validate ``map.jinja`` (\ `fc90075 <https://github.com/saltstack-formulas/template-formula/commit/fc90075dd94d874eb283d96259f552812d8a8d82>`_\ )
+
+Tests
+^^^^^
+
+
+* **inspec:** share library to access some minion informations (\ `64c2b6c <https://github.com/saltstack-formulas/template-formula/commit/64c2b6cdae1ad91959b5c0fe67863a529a070428>`_\ )
+* **inspec:** verify ``map.jinja`` dump (\ `3dc28bf <https://github.com/saltstack-formulas/template-formula/commit/3dc28bfb3453079deca899352ecdff30daeb42f5>`_\ )
+* **platform_finger:** extract from shared library (\ `d68ed45 <https://github.com/saltstack-formulas/template-formula/commit/d68ed45109aa1274c6bf236db30758d795a3ba2a>`_\ )
+
+`4.1.1 <https://github.com/saltstack-formulas/template-formula/compare/v4.1.0...v4.1.1>`_ (2020-07-28)
+----------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen:** use ``saltimages`` Docker Hub where available [skip ci] (\ `eab21c3 <https://github.com/saltstack-formulas/template-formula/commit/eab21c39fb180d3cf3be93a4ae0678b1fbe6357d>`_\ )
+* **kitchen+travis:** add new platforms [skip ci] (\ `111a20b <https://github.com/saltstack-formulas/template-formula/commit/111a20b47d89d275ce4ff5213656d6828acb2760>`_\ )
+* **kitchen+travis:** adjust matrix to add ``3000.3`` [skip ci] (\ `19ae826 <https://github.com/saltstack-formulas/template-formula/commit/19ae82632ece95047b535390bd2325fb30a09af7>`_\ )
+* **travis:** add notifications => zulip [skip ci] (\ `ac93ad8 <https://github.com/saltstack-formulas/template-formula/commit/ac93ad82f143ce9348f841a263df87d717034103>`_\ )
+* **travis:** run linters using ``pre-commit`` (\ `6da26cc <https://github.com/saltstack-formulas/template-formula/commit/6da26cca6a3b3ac89137d81b837633358c534396>`_\ )
+
+Documentation
+^^^^^^^^^^^^^
+
+
+* add basic ``pre-commit`` usage instructions (\ `c78c068 <https://github.com/saltstack-formulas/template-formula/commit/c78c06876eb4c117b3ab00f9da479e8a4c3f1cf5>`_\ )
+* fix whitespace (\ `d98d98f <https://github.com/saltstack-formulas/template-formula/commit/d98d98f4da1096f4c60c5ec5c15d56d1945c9f50>`_\ )
+
+Styles
+^^^^^^
+
+
+* **libtofs.jinja:** use Black-inspired Jinja formatting [skip ci] (\ `55bc69a <https://github.com/saltstack-formulas/template-formula/commit/55bc69a2b194874ceb594c93c8750c320239103c>`_\ )
+
 `4.1.0 <https://github.com/saltstack-formulas/template-formula/compare/v4.0.9...v4.1.0>`_ (2020-05-12)
 ----------------------------------------------------------------------------------------------------------
 

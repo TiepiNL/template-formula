@@ -31,6 +31,9 @@ jobs:
     # Run all of the linters in a single job
     - language: 'node_js'
       node_js: 'lts/*'
+      cache:
+        directories:
+          - $HOME/.cache/pre-commit
       env: 'Lint'
       name: 'Lint: salt-lint, yamllint, rubocop, shellcheck & commitlint'
       before_install: 'skip'
@@ -54,6 +57,10 @@ jobs:
         - npm i -D @commitlint/config-conventional
                    @commitlint/travis-cli
         - commitlint-travis
+        # Install and run `pre-commit`
+        - pip install pre-commit
+        - pre-commit run --all-files --verbose
+        - pre-commit run --hook-stage manual --verbose commitlint-travis
 
     ## Define the rest of the matrix based on Kitchen testing
     # Make sure the instances listed below match up with
@@ -97,8 +104,8 @@ jobs:
     # - env: INSTANCE=default-fedora-31-2019-2-py3
     # - env: INSTANCE=default-opensuse-leap-152-2019-2-py3
     # - env: INSTANCE=default-amazonlinux-2-2019-2-py3
-    # - env: INSTANCE=default-centos-6-2019-2-py2
-    # - env: INSTANCE=default-amazonlinux-1-2019-2-py2
+    - env: INSTANCE=upstart-centos-6-2019-2-py2
+    # - env: INSTANCE=upstart-amazonlinux-1-2019-2-py2
     - env: INSTANCE=default-arch-base-latest-2019-2-py2
     # <REMOVEME
 
