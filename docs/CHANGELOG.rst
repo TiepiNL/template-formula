@@ -2,6 +2,37 @@
 Changelog
 =========
 
+`4.3.0 <https://github.com/saltstack-formulas/template-formula/compare/v4.2.2...v4.3.0>`_ (2020-10-12)
+----------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **pre-commit:** finalise ``rstcheck`` configuration [skip ci] (\ `e78aa0c <https://github.com/saltstack-formulas/template-formula/commit/e78aa0cb784752ae699196c6309fe93bf223a306>`_\ )
+
+Features
+^^^^^^^^
+
+
+* add Gentoo support (\ `4c2f4ed <https://github.com/saltstack-formulas/template-formula/commit/4c2f4ede0223e83e1958be33288fa6b83cce7140>`_\ )
+
+`4.2.2 <https://github.com/saltstack-formulas/template-formula/compare/v4.2.1...v4.2.2>`_ (2020-10-06)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **commitlint:** fix header length at 72 chars as agreed (\ `a95061d <https://github.com/saltstack-formulas/template-formula/commit/a95061ddd088210c5111490234bc1588002cddd5>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **pre-commit:** add to formula [skip ci] (\ `fd89d62 <https://github.com/saltstack-formulas/template-formula/commit/fd89d62ec656dc3e6f84b9834860bf51359452f5>`_\ )
+* **pre-commit:** enable/disable ``rstcheck`` as relevant [skip ci] (\ `219e6b7 <https://github.com/saltstack-formulas/template-formula/commit/219e6b71c85f06657564c87ba58877cfc5ebe511>`_\ )
+
 `4.2.1 <https://github.com/saltstack-formulas/template-formula/compare/v4.2.0...v4.2.1>`_ (2020-09-21)
 ----------------------------------------------------------------------------------------------------------
 

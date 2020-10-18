@@ -31,9 +31,6 @@ jobs:
     # Run all of the linters in a single job
     - language: 'node_js'
       node_js: 'lts/*'
-      cache:
-        directories:
-          - $HOME/.cache/pre-commit
       env: 'Lint'
       name: 'Lint: salt-lint, yamllint, rubocop, shellcheck & commitlint'
       before_install: 'skip'
@@ -57,10 +54,20 @@ jobs:
         - npm i -D @commitlint/config-conventional
                    @commitlint/travis-cli
         - commitlint-travis
+
+    # Run `pre-commit` linters in a single job
+    - language: 'python'
+      env: 'Lint_pre-commit'
+      name: 'Lint: pre-commit'
+      before_install: 'skip'
+      cache:
+        directories:
+          - $HOME/.cache/pre-commit
+      script:
         # Install and run `pre-commit`
-        - pip install pre-commit
-        - pre-commit run --all-files --verbose
-        - pre-commit run --hook-stage manual --verbose commitlint-travis
+        - pip install pre-commit==2.7.1
+        - pre-commit run --all-files --color always --verbose
+        - pre-commit run --color always --hook-stage manual --verbose commitlint-travis
 
     ## Define the rest of the matrix based on Kitchen testing
     # Make sure the instances listed below match up with
@@ -94,6 +101,8 @@ jobs:
     # - env: INSTANCE=default-fedora-31-master-py3
     - env: INSTANCE=default-opensuse-leap-152-master-py3
     # - env: INSTANCE=default-amazonlinux-2-master-py3
+    - env: INSTANCE=gentoo-gentoo-stage3-latest-master-py3
+    - env: INSTANCE=gentoo-gentoo-stage3-systemd-master-py3
     # - env: INSTANCE=default-debian-10-3001-py3
     # - env: INSTANCE=default-debian-9-3001-py3
     # - env: INSTANCE=default-ubuntu-2004-3001-py3
@@ -106,6 +115,8 @@ jobs:
     # - env: INSTANCE=default-amazonlinux-2-3001-py3
     # - env: INSTANCE=default-oraclelinux-8-3001-py3
     # - env: INSTANCE=default-oraclelinux-7-3001-py3
+    # - env: INSTANCE=gentoo-gentoo-stage3-latest-3001-py3
+    # - env: INSTANCE=gentoo-gentoo-stage3-systemd-3001-py3
     # - env: INSTANCE=default-debian-10-3000-3-py3
     # - env: INSTANCE=default-debian-9-3000-3-py3
     # - env: INSTANCE=default-ubuntu-1804-3000-3-py3
@@ -114,6 +125,8 @@ jobs:
     # - env: INSTANCE=default-fedora-31-3000-3-py3
     # - env: INSTANCE=default-opensuse-leap-152-3000-3-py3
     # - env: INSTANCE=default-amazonlinux-2-3000-3-py3
+    # - env: INSTANCE=gentoo-gentoo-stage3-latest-3000-3-py3
+    # - env: INSTANCE=gentoo-gentoo-stage3-systemd-3000-3-py3
     # - env: INSTANCE=default-ubuntu-1804-3000-3-py2
     # - env: INSTANCE=default-ubuntu-1604-3000-3-py2
     - env: INSTANCE=default-arch-base-latest-3000-3-py2
