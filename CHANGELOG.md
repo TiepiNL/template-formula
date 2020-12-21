@@ -1,5 +1,32 @@
 # Changelog
 
+## [4.3.3](https://github.com/saltstack-formulas/template-formula/compare/v4.3.2...v4.3.3) (2020-12-16)
+
+
+### Bug Fixes
+
+* **codeowners:** ensure `lib*` files are owned by `ssf` ([d60cc15](https://github.com/saltstack-formulas/template-formula/commit/d60cc1536637831ef76b2f2c84086b3f88f2684f))
+
+
+### Continuous Integration
+
+* **gitlab-ci:** use GitLab CI as Travis CI replacement ([0403f62](https://github.com/saltstack-formulas/template-formula/commit/0403f62c7780a8a449617003c5363118a8b6ecd6))
+
+## [4.3.2](https://github.com/saltstack-formulas/template-formula/compare/v4.3.1...v4.3.2) (2020-10-31)
+
+
+### Bug Fixes
+
+* **convert-formula.sh:** add -_ to allowed chars in formula name ([a999fee](https://github.com/saltstack-formulas/template-formula/commit/a999fee2145d9b0484049808c3c331943580cc3f))
+* **convert-formula.sh:** delete all existing tags ([7c33601](https://github.com/saltstack-formulas/template-formula/commit/7c33601fd455df90b1082791cdd282a507334898)), closes [#210](https://github.com/saltstack-formulas/template-formula/issues/210)
+
+## [4.3.1](https://github.com/saltstack-formulas/template-formula/compare/v4.3.0...v4.3.1) (2020-10-28)
+
+
+### Tests
+
+* **inspec:** `system.rb` must call parent class initialisation ([1ff9ab1](https://github.com/saltstack-formulas/template-formula/commit/1ff9ab15f23ba9f3b78a1b8f9dcef7a062e2b192))
+
 # [4.3.0](https://github.com/saltstack-formulas/template-formula/compare/v4.2.2...v4.3.0) (2020-10-12)
 
 
