@@ -2,6 +2,110 @@
 Changelog
 =========
 
+`5.0.2 <https://github.com/saltstack-formulas/template-formula/compare/v5.0.1...v5.0.2>`_ (2021-04-14)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **convert-formula.sh:** replace instances of ``template-formula`` for CI (\ `537fe65 <https://github.com/saltstack-formulas/template-formula/commit/537fe65d456741e64823af33865f34457e0e3853>`_\ ), closes `#231 <https://github.com/saltstack-formulas/template-formula/issues/231>`_
+
+Tests
+^^^^^
+
+
+* standardise use of ``share`` suite & ``_mapdata`` state [skip ci] (\ `bbe1c78 <https://github.com/saltstack-formulas/template-formula/commit/bbe1c7840990790eb2df564e96cc9b465093eb62>`_\ )
+
+`5.0.1 <https://github.com/saltstack-formulas/template-formula/compare/v5.0.0...v5.0.1>`_ (2021-03-09)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **convert-formula:** ``_mapdata`` control name must use the formula one (\ `1f3600d <https://github.com/saltstack-formulas/template-formula/commit/1f3600d66fd710bd1a41cb937cb345369d0e3e18>`_\ )
+
+`5.0.0 <https://github.com/saltstack-formulas/template-formula/compare/v4.3.8...v5.0.0>`_ (2021-03-09)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **inspec:** validate ``map.jinja`` configuration (\ `41d222e <https://github.com/saltstack-formulas/template-formula/commit/41d222e30c0da10fabeea23a7ab2886f02ea6479>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **kitchen+ci:** use latest pre-salted images (after CVE) [skip ci] (\ `6453145 <https://github.com/saltstack-formulas/template-formula/commit/6453145da16ab73c7307d14a5b864a91a5573c68>`_\ )
+
+Features
+^^^^^^^^
+
+
+* **map:** update to v5 ``map.jinja`` (\ `42e1932 <https://github.com/saltstack-formulas/template-formula/commit/42e19322c9c4d91a6cfa1e406723b5a799f33f80>`_\ )
+
+BREAKING CHANGES
+^^^^^^^^^^^^^^^^
+
+
+* **map:** ``map.jinja`` now exports a generic ``mapdata`` variable
+* **map:** The per grain parameter values are now under ``TEMPLATE/parameters/``
+
+`4.3.8 <https://github.com/saltstack-formulas/template-formula/compare/v4.3.7...v4.3.8>`_ (2021-02-21)
+----------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gemfile+lock:** use ``ssf`` customised ``kitchen-docker`` repo [skip ci] (\ `23c2bb2 <https://github.com/saltstack-formulas/template-formula/commit/23c2bb2dc26f4c1600d484312a79dd0af0e232d7>`_\ )
+* **kitchen+gitlab-ci:** use latest pre-salted images [skip ci] (\ `00823a2 <https://github.com/saltstack-formulas/template-formula/commit/00823a2d276648d184c92308f7829d0fdeefe0ba>`_\ )
+
+Tests
+^^^^^
+
+
+* **_mapdata:** add verification files for Fedora 33 & Tumbleweed (\ `3347b85 <https://github.com/saltstack-formulas/template-formula/commit/3347b85c928cebe8b0c376eae654e67e01730260>`_\ )
+
+`4.3.7 <https://github.com/saltstack-formulas/template-formula/compare/v4.3.6...v4.3.7>`_ (2021-02-11)
+----------------------------------------------------------------------------------------------------------
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `978a7e7 <https://github.com/saltstack-formulas/template-formula/commit/978a7e7cd04c00fe6e7b5d113926683a86534094>`_\ )
+
+Styles
+^^^^^^
+
+
+* **inspec:** match current practices for file and control names (\ `aa8a58b <https://github.com/saltstack-formulas/template-formula/commit/aa8a58b715fec48b256ff0aa8a0b697b1ae20399>`_\ )
+
+Tests
+^^^^^
+
+
+* **share:** standardise with latest changes [skip ci] (\ `dab2f34 <https://github.com/saltstack-formulas/template-formula/commit/dab2f34c587ea6194351c768e9ba141744536607>`_\ )
+
+`4.3.6 <https://github.com/saltstack-formulas/template-formula/compare/v4.3.5...v4.3.6>`_ (2021-01-14)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **_mapdata:** ensure map data is directly under ``values`` (\ `bcb8e29 <https://github.com/saltstack-formulas/template-formula/commit/bcb8e29b687f9804a1cfbda1253da290432cd5b0>`_\ )
+
+Tests
+^^^^^
+
+
+* **_mapdata:** update for ``_mapdata/init.sls`` change (\ `50162ad <https://github.com/saltstack-formulas/template-formula/commit/50162adad7119285a649321b5f66710974a7983d>`_\ )
+
 `4.3.5 <https://github.com/saltstack-formulas/template-formula/compare/v4.3.4...v4.3.5>`_ (2020-12-23)
 ----------------------------------------------------------------------------------------------------------
 
